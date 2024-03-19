@@ -11,5 +11,22 @@
     "react-scripts": "^5.0.1",
     "router-dom": "^2.2.11",
     "styled-components": "^6.1.8"
+  },
+  "scripts": {
+		"start": "react-scripts start",
+    "start-mac": "PORT=3004 react-scripts start",
+		"start-windows": "set PORT=3004 && react-scripts start"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
