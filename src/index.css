@@ -16,8 +16,8 @@
   --h3-font-size: 40px;
   --brand-font-size: 26px;
   --text-font-size: 18px;
-  --font-weight-header: 800; /* Extra Bold */
-  --font-weight-text: 700; /* Bold */
+  --extra-bold: 800;
+  --bold: 700; 
   --text-line-height: 130%;
 }
 
@@ -56,14 +56,14 @@ html {
 
 body,
 button {
-  font-weight: var(--font-weight-text);
+  font-weight: var(--bold);
   line-height: var(--text-line-height);
 }
 
 h1,
 h2,
 h3 {
-  font-weight: var(--font-weight-header);
+  font-weight: var(--extra-bold);
 }
 
 body {

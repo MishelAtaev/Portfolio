@@ -1,16 +1,24 @@
-import React from 'react';
-import './Hero.css'; 
+import React from "react";
+import "./Hero.css";
+import OldPhoto from "../../images/OldPhoto.jpg";
 
 const Hero = () => {
   return (
     <section className="hero">
       <div className="hero-content">
-        <img src="/path-to-your-image.jpg" alt="Mishel Ataev" className="hero-image"/>
+        <div className="image-container-photo">
+          <img src={OldPhoto} alt="Old Photo" className="profile-pic" />
+        </div>
         <h1>MISHEL ATAEV</h1>
-        <p>With a solid grounding in QA Analysis, I'm eagerly journeying into the realm of Full-Stack Web Development.</p>
+        <div className="text-container">
+          <p className="hero-text">
+            With a solid grounding in QA Analysis, I'm eagerly journeying into
+            the realm of Full-Stack Web Development.
+          </p>
+        </div>
       </div>
     </section>
   );
-}
+};
 
 export default Hero;

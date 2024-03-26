@@ -1,10 +1,108 @@
 .hero {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: relative;
-    left: 0;
-    width: 100%;
-    background-color: var(--second-color); 
-    padding: 15rem; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 4rem 0;
+  background-color: var(--second-color);
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.image-container-photo {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-container-photo::before {
+  content: "";
+  position: absolute;
+  top: 9.5rem;
+  left: 8rem;
+  transform: translate(-50%, -50%);
+  width: 325px;
+  height: 325px;
+  background-color: transparent;
+  border: 3px solid var(--accent-color);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.profile-pic {
+  border-radius: 347px;
+  width: 325px;
+  height: auto;
+  margin-bottom: 3rem;
+  z-index: 2;
+}
+
+h1 {
+  font-size: var(--h1-font-size);
+  color: var(--white);
+  margin-bottom: 5rem;
+  text-align: center;
+}
+
+.hero-text {
+  font-size: var(--h3-font-size);
+  font-weight: var(--bold);
+  color: var(--hero-color);
+  text-align: center;
+  max-width: 850px;
+  line-height: 130%;
+  margin: 1rem auto 2rem;
+}
+
+.text-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-container::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: calc(100% + 7rem);
+  height: calc(100% + 20px);
+  background-color: transparent;
+  border: 3px solid var(--accent-color);
+  border-radius: 100px;
+  z-index: 1;
+}
+
+/* Adjustments for mobile and tablet views using your media queries */
+@media (max-width: 600px) {
+  .hero {
+    padding: 2rem 0; /* Reduce padding on smaller screens */
+  }
+
+  .profile-pic {
+    width: 10rem; /* Smaller image size on mobile */
+    margin-bottom: 2rem; /* Reduce margin on smaller screens */
+  }
+
+  h1 {
+    margin-bottom: 1rem; /* Reduce margin on smaller screens */
+  }
+
+  .hero-text {
+    margin-bottom: 1.5rem; /* Adjust text spacing on smaller screens */
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  /* Adjust hero, profile-pic, h1, and hero-text styles for tablet views if needed */
 }

@@ -12,7 +12,7 @@
   }
   
   .navbar-brand {
-    font-weight: var(--font-weight-header);
+    font-weight: var(--extra-bold);
     font-size: var(--brand-font-size); 
     color: var(--nav-bar-font-color); 
     margin-left: 1rem; 
