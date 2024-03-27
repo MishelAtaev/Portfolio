@@ -9,7 +9,7 @@
 
 .about-me-text {
   position: absolute;
-  left: 30%;
+  left: 20%;
   top: -3.5rem;
   z-index: 2;
 }
@@ -37,6 +37,7 @@
   padding: 5rem 8rem;
   border-radius: 25px 125px 125px;
   position: relative;
+  left: -10%;
   margin: 0 auto;
   max-width: 1200px;
   height: 500px;
@@ -78,11 +79,11 @@
 .about-me-experience::before {
   position: absolute;
   content: "";
-  transform: translate(-250%, 5%);
+  transform: translate(-250%, 6%);
   background-color: var(--accent-color);
   border-radius: 20px;
   width:  9px;
-  height: 165px;
+  height: 160px;
   z-index: 1;
 }
 
