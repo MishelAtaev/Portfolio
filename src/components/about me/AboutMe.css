@@ -4,51 +4,86 @@
   justify-content: center;
   align-items: center;
   padding: 4rem 0;
+  position: relative;
 }
 
 .about-me-text {
-    z-index: 2;
+  position: absolute;
+  left: 30%;
+  top: -3.5rem;
+  z-index: 2;
 }
 
 .about-me-text::before {
-    content: "";
-    position: absolute;
-    top: 25rem;
-    left: 8rem;
-    transform: translate(-50%, -50%);
-    width: 457px;
-    height: 86px;
-    background-color: var(--);
-    border-radius: 50%;
-    z-index: 1;
-  }
-  
+  position: absolute;
+  content: "";
+  transform: translate(-16.4%, -35%);
+  background-color: var(--background-color);
+  padding: 1rem 2rem;
+  border-radius: 250px 250px 0 0;
+  width: 450px;
+  height: 66px;
+  z-index: -1;
+}
+
 .h2-about-me {
   font-size: var(--h2-font-size);
+  color: var(--white);
   margin-bottom: 2rem;
 }
 
 .about-me-content {
   background-color: var(--background-color);
-  display: inline-block;
-  padding: 2rem;
-  border-radius: 20px;
+  padding: 5rem 8rem;
+  border-radius: 25px 125px 125px;
   position: relative;
   margin: 0 auto;
-  max-width: 600px;
+  max-width: 1200px;
+  height: 500px;
+  margin-top: -5rem;
+  margin-left: 25.65%;
+  display: grid;
+  grid-template-areas:
+    "greeting greeting"
+    "hobby experience";
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
 }
 
-.about-me-content::before {
-  content: "";
+.about-me-greeting {
+  grid-area: greeting;
+}
+
+.about-me-hobby {
+  grid-area: hobby; 
+  margin-left: 1.5rem;
+}
+
+.about-me-hobby::before {
   position: absolute;
-  top: 50%;
-  left: -20px;
-  transform: translate(-50%, -50%);
-  width: calc(100% + 40px);
-  height: 100%;
-  border: 3px solid #f9ba5b;
+  content: "";
+  transform: translate(-250%, 6%);
+  background-color: var(--accent-color);
   border-radius: 20px;
-  z-index: -1;
+  width:  9px;
+  height: 125px;
+  z-index: 1;
+}
+
+.about-me-experience {
+  grid-area: experience;
+  margin-left: 1.5rem;
+}
+
+.about-me-experience::before {
+  position: absolute;
+  content: "";
+  transform: translate(-250%, 5%);
+  background-color: var(--accent-color);
+  border-radius: 20px;
+  width:  9px;
+  height: 165px;
+  z-index: 1;
 }
 
 .about-me-greeting,
