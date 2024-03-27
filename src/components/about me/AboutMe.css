@@ -1,0 +1,60 @@
+.about-me {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 0;
+}
+
+.about-me-text {
+    z-index: 2;
+}
+
+.about-me-text::before {
+    content: "";
+    position: absolute;
+    top: 25rem;
+    left: 8rem;
+    transform: translate(-50%, -50%);
+    width: 457px;
+    height: 86px;
+    background-color: var(--);
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+.h2-about-me {
+  font-size: var(--h2-font-size);
+  margin-bottom: 2rem;
+}
+
+.about-me-content {
+  background-color: var(--background-color);
+  display: inline-block;
+  padding: 2rem;
+  border-radius: 20px;
+  position: relative;
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.about-me-content::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -20px;
+  transform: translate(-50%, -50%);
+  width: calc(100% + 40px);
+  height: 100%;
+  border: 3px solid #f9ba5b;
+  border-radius: 20px;
+  z-index: -1;
+}
+
+.about-me-greeting,
+.about-me-hobby,
+.about-me-experience {
+  font-size: var(--text-font-size);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
