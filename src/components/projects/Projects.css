@@ -124,8 +124,25 @@
 }
 
 @media (min-width: 601px) and (max-width: 1024px) {
+  .project-section{
+    width: clamp(20%, 850px, 100%);
+  }
+
   .projects::before {
     width: 250px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "up"
+      "image"
+      "description"
+      "down";
+  }
+
+  .project-description-container {
+    justify-self: center;
   }
 
   .image-wrapper {
@@ -146,6 +163,10 @@
 }
 
 @media (max-width: 600px) {
+  .project-section{
+    width: clamp(20%, 450px, 100%);  
+  }
+
   .projects::before {
     width: 200px;
     height: 50px;
@@ -161,8 +182,8 @@
       "down";
   }
 
-  .project-description-container{
-justify-self: center;
+  .project-description-container {
+    justify-self: center;
   }
 
   .image-wrapper {
