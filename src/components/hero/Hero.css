@@ -86,26 +86,38 @@ h1 {
   z-index: 1;
 }
 
-/* Adjustments for mobile and tablet views using your media queries */
-@media (max-width: 600px) {
+@media  (max-width: 1024px) {
   .hero {
-    padding: 2rem 0; /* Reduce padding on smaller screens */
+    padding: 3rem 0;
+    height: auto;
+  }
+
+  .image-container-photo::before {
+    width: 10rem;
+    height: 10rem;
+    top: 45%;
+    left: 40%;
+  }
+  
+  .hero-content{
+    margin-bottom: 200px;
   }
 
   .profile-pic {
-    width: 10rem; /* Smaller image size on mobile */
-    margin-bottom: 2rem; /* Reduce margin on smaller screens */
+    width: 10rem;
+    margin: 3rem 0;
   }
 
   h1 {
-    margin-bottom: 1rem; /* Reduce margin on smaller screens */
+    margin-bottom: 2rem;
   }
 
   .hero-text {
-    margin-bottom: 1.5rem; /* Adjust text spacing on smaller screens */
+    margin: 1.5rem auto;
   }
-}
 
-@media (min-width: 601px) and (max-width: 1024px) {
-  /* Adjust hero, profile-pic, h1, and hero-text styles for tablet views if needed */
+  .text-container::before {
+    width: calc(100% + 4px);
+    height: calc(100% + 10px);
+  }
 }
