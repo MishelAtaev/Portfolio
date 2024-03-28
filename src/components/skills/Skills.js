@@ -15,6 +15,7 @@ const SkillContainer = styled.div`
   align-items: center;
   position: relative;
   height: 200px;
+  margin: 250px 0;
 
   &::before {
     content: "";
