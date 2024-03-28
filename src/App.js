@@ -8,13 +8,18 @@ import ContactMe from "./components/contact me/ContactMe";
 import OldPhoto from "./images/OldPhoto.jpg";
 
 const App = () => {
+  // on click function to allow scrolling between different sections, adjusted 3 sections as clicking would scroll too far down / up
   const handleNavClick = (sectionId) => {
     const offset = 200;
     const section = document.getElementById(sectionId);
     if (section) {
       const position =
         section.offsetTop -
-        (sectionId === "about-me" || sectionId === "projects" || sectionId === "skills" ? offset : 0);
+        (sectionId === "about-me" ||
+        sectionId === "projects" ||
+        sectionId === "skills"
+          ? offset
+          : 0);
       window.scrollTo({ top: position, behavior: "smooth" });
     }
   };
@@ -22,7 +27,7 @@ const App = () => {
   return (
     <>
       <NavBar onNavClick={handleNavClick} />
-      <Hero  imgSrc={OldPhoto}/>
+      <Hero imgSrc={OldPhoto} />
       <AboutMe />
       <Skills />
       <Projects />

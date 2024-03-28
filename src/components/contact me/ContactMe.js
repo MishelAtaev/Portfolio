@@ -3,6 +3,7 @@ import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import { IoIosMail } from "react-icons/io";
 import styled from "styled-components";
 
+// Creates a background for the whole section
 const Section = styled.section`
   background-color: var(--second-color);
   display: flex;
@@ -15,6 +16,7 @@ const Section = styled.section`
   padding: 100px;
 `;
 
+// Header styling
 const Heading = styled.h2`
   color: white;
   font-weight: bold;
@@ -22,6 +24,7 @@ const Heading = styled.h2`
   margin-bottom: 2rem;
 `;
 
+//Styling for icons
 const IconsContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -29,6 +32,7 @@ const IconsContainer = styled.div`
   margin-top: 30px;
 `;
 
+// Styling for pseudo element and icons
 const IconWrapper = styled.div`
   width: 50px;
   height: 50px;
@@ -58,6 +62,7 @@ const IconWrapper = styled.div`
   }
 `;
 
+// Component that adds the icons and on click allows the user to either send an email or access the page
 const ContactMe = () => {
   const mailTo = "mailto:ataevmishel@hotmail.com";
   const githubUrl = "https://github.com/mishelataev";

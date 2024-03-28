@@ -16,6 +16,7 @@
   width: 100%;
 }
 
+/* Container for the photo to allow usage of pseudo element */
 .image-container-photo {
   position: relative;
   display: flex;
@@ -23,6 +24,7 @@
   align-items: center;
 }
 
+/* Creates a gold circle same size as image behind the image */
 .image-container-photo::before {
   content: "";
   position: absolute;
@@ -69,6 +71,7 @@ h1 {
   align-items: center;
 }
 
+/* Creates gold circle around text for emphasis */
 .text-container::before {
   content: "";
   position: absolute;

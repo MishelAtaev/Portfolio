@@ -1,7 +1,8 @@
 import React from "react";
 import "./Hero.css";
 
-const Hero = ({imgSrc }) => {
+// Hero component with a prop set up so that the image can be changed at a later time
+const Hero = ({ imgSrc }) => {
   return (
     <section className="hero" id="hero">
       <div className="hero-content">

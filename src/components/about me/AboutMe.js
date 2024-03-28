@@ -1,6 +1,7 @@
 import React from "react";
 import "./AboutMe.css";
 
+// AboutMe component with an id attached for the navbar
 const AboutMe = () => {
   return (
     <section className="about-me" id="about-me">

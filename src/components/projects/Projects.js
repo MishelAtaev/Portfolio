@@ -13,7 +13,7 @@ const Projects = () => {
   };
 
   useEffect(() => {
-    const intervalId = setInterval(goToNextProject, 10000000000);
+    const intervalId = setInterval(goToNextProject, 10000000000); //need to change back to 10000
     return () => clearInterval(intervalId);
   }, [currentIndex]);
 

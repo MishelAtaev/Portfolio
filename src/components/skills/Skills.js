@@ -9,6 +9,7 @@ import {
 } from "react-icons/fa";
 import { SiMongodb } from "react-icons/si";
 
+// Container for the skills with a pseudo element for style
 const SkillContainer = styled.div`
   display: flex;
   justify-content: center;
@@ -22,17 +23,16 @@ const SkillContainer = styled.div`
     position: absolute;
     width: 700px;
     height: 180px;
-    background-color: var(
-      --second-color
-    ); 
+    background-color: var(--second-color);
     border-radius: 800px;
     z-index: -1;
   }
 `;
 
+// Style for the icons
 const IconStyle = styled.div`
   font-size: 70px;
-  margin: 0 10px; 
+  margin: 0 10px;
 `;
 
 const Skills = () => {
