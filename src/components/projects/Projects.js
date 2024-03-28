@@ -33,7 +33,7 @@ const Projects = () => {
     ));
 
   return (
-    <section key={currentIndex} className="project-section">
+    <section key={currentIndex} className="project-section" id="projects">
       <div className="projects">
         <h2>Projects</h2>
       </div>

@@ -5,16 +5,28 @@ import AboutMe from "./components/about me/AboutMe";
 import Skills from "./components/skills/Skills";
 import Projects from "./components/projects/Projects";
 import ContactMe from "./components/contact me/ContactMe";
+import OldPhoto from "./images/OldPhoto.jpg";
 
 const App = () => {
+  const handleNavClick = (sectionId) => {
+    const offset = 200;
+    const section = document.getElementById(sectionId);
+    if (section) {
+      const position =
+        section.offsetTop -
+        (sectionId === "about-me" || sectionId === "projects" || sectionId === "skills" ? offset : 0);
+      window.scrollTo({ top: position, behavior: "smooth" });
+    }
+  };
+
   return (
     <>
-        <NavBar />
-        <Hero />
-        <AboutMe /> 
-        <Skills />
-        <Projects />
-        <ContactMe />
+      <NavBar onNavClick={handleNavClick} />
+      <Hero  imgSrc={OldPhoto}/>
+      <AboutMe />
+      <Skills />
+      <Projects />
+      <ContactMe />
     </>
   );
 };

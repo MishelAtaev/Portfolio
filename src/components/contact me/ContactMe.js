@@ -64,7 +64,7 @@ const ContactMe = () => {
   const linkedInUrl = "https://linkedin.com/in/mishel-ataev-8594b41a5/";
 
   return (
-    <Section>
+    <Section id="contact-me">
       <Heading>CONTACT ME</Heading>
       <IconsContainer>
         <IconWrapper

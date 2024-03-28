@@ -1,13 +1,12 @@
 import React from "react";
 import "./Hero.css";
-import OldPhoto from "../../images/OldPhoto.jpg";
 
-const Hero = () => {
+const Hero = ({imgSrc }) => {
   return (
-    <section className="hero">
+    <section className="hero" id="hero">
       <div className="hero-content">
         <div className="image-container-photo">
-          <img src={OldPhoto} alt="Old Photo" className="profile-pic" />
+          <img src={imgSrc} alt="Profile" className="profile-pic" />
         </div>
         <h1>MISHEL ATAEV</h1>
         <div className="text-container">

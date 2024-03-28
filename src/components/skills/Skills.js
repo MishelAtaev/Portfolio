@@ -37,7 +37,7 @@ const IconStyle = styled.div`
 
 const Skills = () => {
   return (
-    <section>
+    <section id="skills">
       <SkillContainer>
         <IconStyle>
           <FaHtml5 color="#e34f26" />
