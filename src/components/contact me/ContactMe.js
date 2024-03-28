@@ -14,6 +14,14 @@ const Section = styled.section`
   position: relative;
   z-index: 1;
   padding: 100px;
+
+  @media (min-width: 601px) and (max-width: 1024px) {
+    padding: 60px;
+  }
+
+  @media (max-width: 600px) {
+    padding: 30px;
+  }
 `;
 
 // Header styling
@@ -30,6 +38,14 @@ const IconsContainer = styled.div`
   justify-content: center;
   gap: 2rem;
   margin-top: 30px;
+
+  @media (min-width: 601px) and (max-width: 1024px) {
+    margin-top: 20px;
+  }
+
+  @media (max-width: 600px) {
+    margin-top: 10px;
+  }
 `;
 
 // Styling for pseudo element and icons
@@ -59,6 +75,24 @@ const IconWrapper = styled.div`
     width: 100%;
     height: 100%;
     z-index: 3;
+  }
+
+  @media (min-width: 601px) and (max-width: 1024px) {
+    &::before{
+      width: 50px;
+      height: 50px;
+    }
+    width: 40px;
+    height: 40px;
+  }
+
+  @media (max-width: 600px) {
+    &::before{
+      width: 40px;
+      height: 40px;
+    }
+    width: 30px;
+    height: 30px;
   }
 `;
 
