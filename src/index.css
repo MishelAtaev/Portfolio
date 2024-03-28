@@ -10,12 +10,13 @@
   --accent-color: #f9ba5b;
   --nav-bar-font-color: #c1c1c1;
 
-  --font: "Montserrat", sans-serif;
   --h1-font-size: 85px;
   --h2-font-size: 50px;
   --h3-font-size: 40px;
   --brand-font-size: 26px;
   --text-font-size: 22px;
+
+  --font: "Montserrat", sans-serif;
   --extra-bold: 800;
   --bold: 700;
   --text-line-height: 130%;
