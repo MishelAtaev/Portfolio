@@ -10,7 +10,7 @@
 /* Moved about me text for stylistic reasons */
 .about-me-text {
   position: absolute;
-  left: 20%;
+  left: clamp(19.7%, 14vw + 1rem, 30%);
   top: -3.5rem;
   z-index: 2;
 }
@@ -23,7 +23,7 @@
   background-color: var(--background-color);
   padding: 1rem 2rem;
   border-radius: 250px 250px 0 0;
-  width: 450px;
+  width: 400px;
   height: 66px;
   z-index: -1;
 }
@@ -101,4 +101,67 @@
   font-size: var(--text-font-size);
   margin-bottom: 1rem;
   line-height: 1.6;
+}
+
+@media (max-width: 1024px) {
+  .about-me-hobby::before,
+  .about-me-experience::before {
+    display: none;
+  }
+  .about-me-hobby,
+  .about-me-experience,
+  .about-me-greeting {
+    margin-left: -1.5rem;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .about-me-content {
+    width: 550px;
+    height: 400px;
+    padding: 1.5rem 2.2rem;
+  }
+
+  .about-me-text::before {
+    padding: 0.8rem 1.6rem;
+    width: 180px;
+    height: 50px;
+    top: 5px;
+  }
+
+  .about-me-hobby,
+  .about-me-experience,
+  .about-me-greeting {
+    font-size: clamp(14px, 16px, 18px);
+  }
+
+  .about-me-hobby {
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .about-me-text::before {
+    padding: 0.8rem 1.6rem;
+    width: 120px;
+    height: 50px;
+    top: 5px;
+    left: 10%;
+  }
+
+  .about-me-hobby,
+  .about-me-experience,
+  .about-me-greeting {
+    font-size: clamp(10px, 12px, 14px);
+  }
+
+  .about-me-hobby {
+    padding-right: 15px;
+  }
+
+  .about-me-content {
+    width: 350px;
+    height: 450px;
+    padding: 1.5rem 2rem;
+  }
 }
