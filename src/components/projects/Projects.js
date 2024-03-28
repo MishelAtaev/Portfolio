@@ -12,8 +12,9 @@ const Projects = () => {
     );
   };
 
+  // Swaps between projects every 10 seconds
   useEffect(() => {
-    const intervalId = setInterval(goToNextProject, 10000000000); //need to change back to 10000
+    const intervalId = setInterval(goToNextProject, 10000); 
     return () => clearInterval(intervalId);
   }, [currentIndex]);
 
@@ -23,6 +24,7 @@ const Projects = () => {
     );
   };
 
+  // Splits description into a new p element if \n is present
   const currentProject = projectsData[currentIndex];
   const descriptionParagraphs = currentProject.description
     .split("\n")

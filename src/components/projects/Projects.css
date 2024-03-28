@@ -124,8 +124,8 @@
 }
 
 @media (min-width: 601px) and (max-width: 1024px) {
-  .project-section{
-    width: clamp(20%, 850px, 100%);
+  .project-section {
+    width: clamp(20%, 850px, 90%);
   }
 
   .projects::before {
@@ -160,11 +160,15 @@
     width: 100%;
     height: auto;
   }
+
+  .arrow {
+    margin: 25px 0;
+  }
 }
 
 @media (max-width: 600px) {
-  .project-section{
-    width: clamp(20%, 450px, 100%);  
+  .project-section {
+    width: clamp(20%, 450px, 100%);
   }
 
   .projects::before {
@@ -200,5 +204,9 @@
   .project-image {
     width: 100%;
     height: auto;
+  }
+
+  .arrow{
+    margin: 15px 0;
   }
 }
