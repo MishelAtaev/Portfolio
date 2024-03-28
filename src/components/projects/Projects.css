@@ -1,4 +1,87 @@
-.project-display {
-    display:flex;
+.project-section {
+    display: grid;
+    grid-template-rows: auto 1fr auto; 
+    grid-template-columns: 1fr 1fr; 
+    gap: 20px;
+    align-items: center;
     justify-content: center;
-}
+    position: relative;
+    max-width: 1200px;
+    margin: auto;
+    padding: 5rem 8rem;
+    border-radius: 180px 180px 0 0;
+    background-color: var(--background-color);
+    z-index: 1;
+  }
+  
+  .projects {
+    grid-column: 1 / -1; 
+    justify-self: center;
+    position: relative;
+    z-index: 2;
+    color: var(--black);
+    top: -400%;
+  }
+  
+  .projects::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--accent-color);
+    border-radius: 200px;
+    width: 500px;
+    height: 100px;
+    z-index: -1;
+  }
+  
+  .projects-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+      "up up"
+      "details description"
+      "down down";
+    width: 1000px;
+    gap: 20px;
+  }
+  
+  .up {
+    grid-area: up;
+    justify-self: center;
+    margin: 15px;
+  }
+  
+  .down {
+    grid-area: down;
+    justify-self: center;
+  }
+  
+  .project-details {
+    grid-area: details;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .project-description-container {
+    grid-area: description;
+    align-self: start;
+    justify-self: start;
+  }
+  
+  .arrow {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem; /* Adjust the size as needed */
+  }
+  
+  .project-image {
+    width: 315px;
+    height: 390px;
+    object-fit: cover; /* Ensures the image fits the box without distortion */
+  }
+  

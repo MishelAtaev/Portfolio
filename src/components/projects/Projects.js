@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { projectsData } from "./projectsData";
-import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
+import { FaArrowUp, FaArrowDown } from "react-icons/fa";
 import "./Projects.css";
 
 const Projects = () => {
@@ -13,9 +13,9 @@ const Projects = () => {
   };
 
   useEffect(() => {
-    const intervalId = setInterval(goToNextProject, 100000);
+    const intervalId = setInterval(goToNextProject, 10000000000);
     return () => clearInterval(intervalId);
-  }, [currentIndex]);
+  }, []);
 
   const goToPreviousProject = () => {
     setCurrentIndex((prevIndex) =>
@@ -26,24 +26,27 @@ const Projects = () => {
   const currentProject = projectsData[currentIndex];
 
   return (
-    <section key={currentIndex}>
-      <div className="project-display">
-        <h2 className="project-title">{currentProject.title}</h2>
+    <section key={currentIndex} className="project-section">
+      <div className="projects">
+        <h2>Projects</h2>
       </div>
-      <div className="projects-container">
-        <button onClick={goToPreviousProject}>
-          <FaArrowLeft />
+      <div className="projects-grid">
+        <button className="arrow up" onClick={goToPreviousProject} aria-label="Previous Project">
+          <FaArrowUp />
         </button>
-        <div>
+        <div className="project-details">
+          <h3 className="project-title">{currentProject.title}</h3>
           <img
             className="project-image"
             src={currentProject.imageUrl}
             alt={currentProject.title}
           />
+        </div>
+        <div className="project-description-container">
           <p className="project-description">{currentProject.description}</p>
         </div>
-        <button onClick={goToNextProject}>
-          <FaArrowRight />
+        <button className="arrow down" onClick={goToNextProject} aria-label="Next Project">
+          <FaArrowDown />
         </button>
       </div>
     </section>
