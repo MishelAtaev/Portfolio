@@ -15,7 +15,7 @@ const Projects = () => {
   useEffect(() => {
     const intervalId = setInterval(goToNextProject, 10000000000);
     return () => clearInterval(intervalId);
-  }, []);
+  }, [currentIndex]);
 
   const goToPreviousProject = () => {
     setCurrentIndex((prevIndex) =>
@@ -24,6 +24,13 @@ const Projects = () => {
   };
 
   const currentProject = projectsData[currentIndex];
+  const descriptionParagraphs = currentProject.description
+    .split("\n")
+    .map((paragraph, index) => (
+      <p key={index} className="project-description">
+        {paragraph}
+      </p>
+    ));
 
   return (
     <section key={currentIndex} className="project-section">
@@ -31,21 +38,23 @@ const Projects = () => {
         <h2>Projects</h2>
       </div>
       <div className="projects-grid">
-        <button className="arrow up" onClick={goToPreviousProject} aria-label="Previous Project">
+        <button className="arrow up" onClick={goToPreviousProject}>
           <FaArrowUp />
         </button>
         <div className="project-details">
           <h3 className="project-title">{currentProject.title}</h3>
-          <img
-            className="project-image"
-            src={currentProject.imageUrl}
-            alt={currentProject.title}
-          />
+          <div className="image-wrapper">
+            <img
+              className="project-image"
+              src={currentProject.imageUrl}
+              alt={currentProject.title}
+            />
+          </div>
         </div>
         <div className="project-description-container">
-          <p className="project-description">{currentProject.description}</p>
+          {descriptionParagraphs}
         </div>
-        <button className="arrow down" onClick={goToNextProject} aria-label="Next Project">
+        <button className="arrow down" onClick={goToNextProject}>
           <FaArrowDown />
         </button>
       </div>
