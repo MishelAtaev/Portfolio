@@ -44,7 +44,7 @@
   grid-template-columns: 1fr 1fr;
   grid-template-areas:
     "up up"
-    "details description"
+    "image description"
     "down down";
   width: 1000px;
   gap: 20px;
@@ -63,9 +63,9 @@
   justify-self: center;
 }
 
-/* Claiming the details grid also setting up area for image + project name  */
+/* Claiming the image grid also setting up area for image + project name  */
 .project-details {
-  grid-area: details;
+  grid-area: image;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -121,4 +121,63 @@
   height: 100%;
   border: 3px solid var(--accent-color);
   z-index: -1;
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+  .projects::before {
+    width: 250px;
+  }
+
+  .image-wrapper {
+    width: 250px;
+    height: auto;
+  }
+
+  .image-wrapper::before {
+    width: 100%;
+    height: 100%;
+    border-width: 2px;
+  }
+
+  .project-image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .projects::before {
+    width: 200px;
+    height: 50px;
+    margin-top: 25px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "up"
+      "image"
+      "description"
+      "down";
+  }
+
+  .project-description-container{
+justify-self: center;
+  }
+
+  .image-wrapper {
+    width: 200px;
+    height: auto;
+  }
+
+  .image-wrapper::before {
+    width: 100%;
+    height: 100%;
+    border-width: 2px;
+  }
+
+  .project-image {
+    width: 100%;
+    height: auto;
+  }
 }
