@@ -27,12 +27,36 @@ const SkillContainer = styled.div`
     border-radius: 800px;
     z-index: -1;
   }
+
+  @media (min-width: 601px) and (max-width: 1024px) {
+    &::before {
+      width: 450px;
+      height: 120px;
+    }
+    margin: 150px 0;
+  }
+
+  @media (max-width: 600px) {
+    &::before {
+      width: 350px;
+      height: 120px;
+    }
+    margin: 150px 0;
+  }
 `;
 
 // Style for the icons
 const IconStyle = styled.div`
-  font-size: 70px;
+  font-size: 60px;
   margin: 0 10px;
+
+  @media (min-width: 601px) and (max-width: 1024px) {
+    font-size: 40px;
+  }
+
+  @media (max-width: 600px) {
+    font-size: 30px;
+  }
 `;
 
 const Skills = () => {
