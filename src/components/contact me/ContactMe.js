@@ -59,17 +59,36 @@ const IconWrapper = styled.div`
 `;
 
 const ContactMe = () => {
+  const mailTo = "mailto:ataevmishel@hotmail.com";
+  const githubUrl = "https://github.com/mishelataev";
+  const linkedInUrl = "https://linkedin.com/in/mishel-ataev-8594b41a5/";
+
   return (
     <Section>
       <Heading>CONTACT ME</Heading>
       <IconsContainer>
-        <IconWrapper>
+        <IconWrapper
+          as="a"
+          href={mailTo}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <IoIosMail />
         </IconWrapper>
-        <IconWrapper>
+        <IconWrapper
+          as="a"
+          href={githubUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FaGithub />
         </IconWrapper>
-        <IconWrapper>
+        <IconWrapper
+          as="a"
+          href={linkedInUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FaLinkedinIn />
         </IconWrapper>
       </IconsContainer>
