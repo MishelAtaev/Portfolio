@@ -38,7 +38,7 @@ const SkillContainer = styled.div`
 
   @media (max-width: 600px) {
     &::before {
-      width: 350px;
+      width: clamp(40%, 350px, 100%);
       height: 120px;
     }
     margin: 150px 0;
@@ -56,6 +56,7 @@ const IconStyle = styled.div`
 
   @media (max-width: 600px) {
     font-size: 30px;
+    margin: 0 clamp(6px, 8px, 10px)
   }
 `;
 

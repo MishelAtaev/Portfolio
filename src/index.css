@@ -49,6 +49,8 @@
   padding: 0;
   box-sizing: border-box;
   font-family: var(--font);
+  /* Debug Code */
+  /* border: 1px solid red;  */
 }
 
 html {

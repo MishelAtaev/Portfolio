@@ -117,9 +117,10 @@
 
 @media (min-width: 601px) and (max-width: 1024px) {
   .about-me-content {
-    width: 550px;
+    width: clamp(25%, 750px, 80%);
     height: 400px;
     padding: 1.5rem 2.2rem;
+    border-radius: 10px 75px 75px 75px;
   }
 
   .about-me-text::before {
@@ -160,8 +161,8 @@
   }
 
   .about-me-content {
-    width: 350px;
-    height: 450px;
+    height: clamp(40%, 450px, 80%);
     padding: 1.5rem 2rem;
+    border-radius: 10px 75px 75px 75px;
   }
 }

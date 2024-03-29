@@ -51,6 +51,10 @@ button {
 }
 
 @media (max-width: 1024px) {
+  /* .navbar{
+    width: clamp(29%, 1024px, 100%);
+  } */
+
   .navbar-flex {
     display: none;
     flex-direction: column;
@@ -62,7 +66,7 @@ button {
     transform: translateY(-100%);
     transition: transform 0.5s ease, opacity 0.3s ease;
     opacity: 0;
-    z-index: 999;
+    z-index: -1000;
   }
 
   .navbar-flex.show {
@@ -74,7 +78,7 @@ button {
   .menu-icon {
     display: block;
     color: var(--white);
-    margin-left: 1rem;
+    margin-right: 1rem;
     color: var(--nav-bar-font-color);
     transition: color 0.3s;
   }

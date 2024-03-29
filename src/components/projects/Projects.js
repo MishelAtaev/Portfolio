@@ -14,7 +14,7 @@ const Projects = () => {
 
   // Swaps between projects every 10 seconds
   useEffect(() => {
-    const intervalId = setInterval(goToNextProject, 10000); 
+    const intervalId = setInterval(goToNextProject, 1000000); 
     return () => clearInterval(intervalId);
   }, [currentIndex]);
 
