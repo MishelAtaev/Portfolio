@@ -113,11 +113,11 @@ h1 {
   }
 
   .hero-text {
-    margin: 1.5rem auto;
+    margin: clamp(5%, 1.5rem, 50%) clamp(10%, 1rem, 60%);
   }
 
   .text-container::before {
-    width: calc(100% + 4px);
+    width: clamp(95%, 500px, 80%);
     height: calc(100% + 10px);
   }
 }
